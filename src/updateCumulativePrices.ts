@@ -41,7 +41,7 @@ export default async function updateCumulativePrices(
   };
 
   if (useNonce !== undefined && useNonce !== null) {
-    const gasPrice = (await fuse.provider.getGasPrice()).mul(120).div(100);
+    const gasPrice = (await fuse.provider.getGasPrice()).mul(250).div(100);
     txRequest = { ...txRequest, gasPrice: gasPrice };
   }
 
@@ -53,7 +53,7 @@ export default async function updateCumulativePrices(
     const gasLimit = await fetchGasLimitForTransaction(fuse, 'update', txRequest);
     txRequest = { ...txRequest, gasLimit: gasLimit };
   } catch (error) {
-    throw 'Failed to estimate gas before signing and sending update transaction: ' + error;
+    console.log('Failed to estimate gas before signing and sending update transaction: ' + error);
   }
 
   // send transaction

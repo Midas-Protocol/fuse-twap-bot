@@ -37,7 +37,7 @@ export default async function tryUpdateCumulativePrices(
   }
   // Get pairs, min periods, and deviation thresholds
   let pairs = [];
-  let baseTokens = [];
+  let baseTokens: Array<string> = [];
   let minPeriods = [];
   let deviationThresholds = [];
 
@@ -62,8 +62,9 @@ export default async function tryUpdateCumulativePrices(
     minPeriods,
     deviationThresholds
   );
-
-  console.log(workable, 'workable');
+  pairs.map((p, i) =>
+    console.log(`pair: ${p}, base token: ${baseTokens[i]}, workable: ${workable[i]}`)
+  );
   let workableSince: {
     [key: string]: number | undefined;
   } = {};
