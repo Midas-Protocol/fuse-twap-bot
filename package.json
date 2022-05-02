@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/Rari-Capital/fuse-twap-bot#readme",
   "dependencies": {
-    "@midas-capital/sdk": "0.1.28",
+    "@midas-capital/sdk": "0.1.30",
     "axios": "^0.26.0",
     "dotenv": "^16.0.0",
     "ethers": "^5.6.2"
