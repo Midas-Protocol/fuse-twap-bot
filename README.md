@@ -1,3 +1,5 @@
+# DEPRECATED => moved to `monorepo/packages/fuse-twap-bot`
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 # Fuse by Rari Capital: Uniswap V2 TWAP Bot
 
